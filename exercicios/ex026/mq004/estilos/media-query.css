@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* 
+    Typical device breaking points
+    -----------------------------
+    Pequenas Telas: até 600px
+    Celular: 600px - 768px
+    Tablet: 768px - 992px
+    Desktop: 992px - 1200px
+    Grandes Telas: acima de 1200px
+*/
+
+/* Impressão */
+@media print {
+  * {
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  body {
+    background-image: url("../imagens/back-print.jpg"); /* Desnecessário */
+  }
+
+  main {
+    border: 2px solid black;
+  }
+
+  main::after {
+    content: "Essa impressão foi feita atraves do Curso em Video";
+    text-decoration: overline;
+  }
+
+  main > h1 {
+    text-shadow: none;
+    color: black;
+  }
+
+  #print {
+    display: block;
+  }
+  #phone {
+    display: none;
+  }
+  #tablet {
+    display: none;
+  }
+  #pc {
+    display: none;
+  }
+  #tv {
+    display: none;
+  }
+}
+
+/* Não preciso fazer pois já foi feito no style padrão (mobile first) */
+/* @media screen and (max-width: 600px) {
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+} */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* Tablet */
+  body {
+    background-image: url("../imagens/back-tablet.jpg");
+  }
+
+  #print {
+    display: none;
+  }
+  #phone {
+    display: none;
+  }
+  #tablet {
+    display: block;
+  }
+  #pc {
+    display: none;
+  }
+  #tv {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /* Desktop */
+  body {
+    background-image: url("../imagens/back-pc.jpg");
+  }
+
+  #print {
+    display: none;
+  }
+  #phone {
+    display: none;
+  }
+  #tablet {
+    display: none;
+  }
+  #pc {
+    display: block;
+  }
+  #tv {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* Grandes telas */
+  body {
+    background-image: url("../imagens/back-tv.jpg");
+  }
+
+  #print {
+    display: none;
+  }
+  #phone {
+    display: none;
+  }
+  #tablet {
+    display: none;
+  }
+  #pc {
+    display: none;
+  }
+  #tv {
+    display: block;
+  }
+}

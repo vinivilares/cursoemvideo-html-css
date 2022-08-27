@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="estilos/style.css" />
+    <link rel="stylesheet" href="estilos/media-query.css" />
+    <title>Media Query</title>
+  </head>
+  <body onresize="mudar()">
+    <header>
+      <h1>Meu Site</h1>
+      <i id="burger" class="material-symbols-outlined"> menu </i>
+      <menu id="menu">
+        <ul>
+          <li><a href="#">Opção 1</a></li>
+          <li><a href="#">Opção 2</a></li>
+          <li><a href="#">Opção 3</a></li>
+          <li><a href="#">Opção 4</a></li>
+          <li><a href="#">Opção 5</a></li>
+        </ul>
+      </menu>
+    </header>
+
+    <main>
+      <article>
+        <h2>Testando Media Queries</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          eum? Suscipit quaerat quibusdam rem quos nemo eligendi ratione
+          pariatur sequi fugit nesciunt doloremque dolor vitae cupiditate
+          aliquam accusantium recusandae voluptates nihil repellendus a itaque,
+          corporis molestiae! Aut qui illo nostrum accusamus modi amet
+          perferendis. Dolore molestiae laborum sint consequuntur nihil magni
+          quas nobis, maiores odit velit recusandae tempora dicta error nulla
+          ullam dignissimos quasi eaque voluptas officia. Culpa modi sapiente
+          cum consequatur perferendis cumque fuga soluta esse dolorem animi nam
+          quam quidem ab officiis provident hic, eos, nostrum rem officia illo
+          corrupti itaque harum. Modi, nam. Ab vero nam voluptatem!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          eum? Suscipit quaerat quibusdam rem quos nemo eligendi ratione
+          pariatur sequi fugit nesciunt doloremque dolor vitae cupiditate
+          aliquam accusantium recusandae voluptates nihil repellendus a itaque,
+          corporis molestiae! Aut qui illo nostrum accusamus modi amet
+          perferendis. Dolore molestiae laborum sint consequuntur nihil magni
+          quas nobis, maiores odit velit recusandae tempora dicta error nulla
+          ullam dignissimos quasi eaque voluptas officia. Culpa modi sapiente
+          cum consequatur perferendis cumque fuga soluta esse dolorem animi nam
+          quam quidem ab officiis provident hic, eos, nostrum rem officia illo
+          corrupti itaque harum. Modi, nam. Ab vero nam voluptatem!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          eum? Suscipit quaerat quibusdam rem quos nemo eligendi ratione
+          pariatur sequi fugit nesciunt doloremque dolor vitae cupiditate
+          aliquam accusantium recusandae voluptates nihil repellendus a itaque,
+          corporis molestiae! Aut qui illo nostrum accusamus modi amet
+          perferendis. Dolore molestiae laborum sint consequuntur nihil magni
+          quas nobis, maiores odit velit recusandae tempora dicta error nulla
+          ullam dignissimos quasi eaque voluptas officia. Culpa modi sapiente
+          cum consequatur perferendis cumque fuga soluta esse dolorem animi nam
+          quam quidem ab officiis provident hic, eos, nostrum rem officia illo
+          corrupti itaque harum. Modi, nam. Ab vero nam voluptatem!
+        </p>
+      </article>
+    </main>
+
+    <script>
+      burger.addEventListener("click", () => {
+        menu.style.display == "block"
+          ? (menu.style.display = "none")
+          : (menu.style.display = "block");
+      });
+
+      window.addEventListener("resize", () => {
+        window.innerWidth >= 768
+          ? (menu.style.display = "block")
+          : (menu.style.display = "none");
+      });
+    </script>
+  </body>
+</html>
